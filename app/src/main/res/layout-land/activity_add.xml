@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        app:elevation="2dp"
+        app:itemBackground="@android:color/white"
+        app:itemIconSize="24dp"
+        app:menu="@menu/menu_bottom_navigation" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        tools:context=".addActivity"
+        tools:layout_editor_absoluteY="81dp">
+
+        <TextView
+            android:id="@+id/AddActivity_title"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="Add an item to your list:"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/AddActivity_titlePrompt"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="bottom"
+            android:text="Title:"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AddActivity_title" />
+
+        <EditText
+            android:id="@+id/AddActivity_getTitle"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:ems="10"
+            android:hint="@string/enterTitle"
+            android:inputType="textPersonName"
+            android:paddingTop="30dp"
+            app:layout_constraintStart_toEndOf="@+id/AddActivity_titlePrompt"
+            app:layout_constraintTop_toTopOf="@+id/AddActivity_titlePrompt" />
+
+        <TextView
+            android:id="@+id/AddActivity_descriptionPrompt"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="bottom"
+            android:text="Description:"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/AddActivity_titlePrompt"
+            app:layout_constraintTop_toBottomOf="@+id/AddActivity_titlePrompt" />
+
+        <EditText
+            android:id="@+id/AddActivity_getDescription"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/enterDescription"
+            android:inputType="textMultiLine"
+            android:paddingTop="30dp"
+            app:layout_constraintStart_toEndOf="@+id/AddActivity_descriptionPrompt"
+            app:layout_constraintTop_toTopOf="@+id/AddActivity_descriptionPrompt" />
+
+        <TextView
+            android:id="@+id/AddActivity_priorityPrompt"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="bottom"
+            android:text="Priority:"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/AddActivity_descriptionPrompt"
+            app:layout_constraintTop_toBottomOf="@+id/AddActivity_descriptionPrompt" />
+
+        <Spinner
+            android:id="@+id/AddActivity_priorityMenu"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:entries="@menu/menu_priority"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toEndOf="@+id/AddActivity_priorityPrompt"
+            app:layout_constraintTop_toTopOf="@+id/AddActivity_priorityPrompt" />
+
+        <Button
+            android:id="@+id/AddActivity_addButton"
+            android:layout_width="145dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="50dp"
+            android:background="@color/colorPrimary"
+            android:text="Add →"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/AddActivity_getDescription"
+            app:layout_constraintTop_toTopOf="@+id/AddActivity_descriptionPrompt" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
+

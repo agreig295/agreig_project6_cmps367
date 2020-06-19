@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Scheduler2</string>
+    <string name="enterTitle">Enter Title</string>
+    <string name="enterDescription">Enter Description</string>
+</resources>
